@@ -1,23 +1,19 @@
 #include <iostream>
-#include <iomanip>
+
 using namespace std;
 
- int main()
- {
-    float meter, kilometer;
+int main() {
+    double jarak_meter, jarak_kilometer;
 
-        system("cls");
+    // Meminta pengguna memasukkan jarak dalam meter
+    cout << "Masukkan jarak dalam meter: ";
+    cin >> jarak_meter;
 
-    cout <<"==============================================" << endl;
-    cout <<" Pengubah Jarak dari meter menjadi kilometer"   << endl;
-    cout <<"==============================================" << endl;
-    cout <<"Masukkan nilai satuan jarak meter(m) : "; cin >> meter;
-      
-    kilometer = meter/1000;
+    // Mengonversi jarak dari meter ke kilometer
+    jarak_kilometer = jarak_meter / 1000.0;
 
-    cout << fixed;
-    cout << setprecision(2);
+    // Menampilkan hasil konversi
+    cout << "Jarak dalam kilometer: " << jarak_kilometer << " km" << endl;
 
-    cout <<"Hasil dalam kilometer(km): " << kilometer << endl;
-
- }
+    return 0;
+}
