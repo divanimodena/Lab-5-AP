@@ -1,32 +1,35 @@
 #include <iostream>
-#include <iomanip>
 #include <string>
 
 using namespace std;
 
-int main() {
-    system("cls");
+struct Mahasiswa {
     string nama;
-    char nim[9], kom; 
+    string nim;
+    string jurusan;
     float ipk;
+};
 
-    cout << "Masukkan Nama: ";
-    getline(cin, nama);
+int main() {
+    Mahasiswa mhs;
 
-    cout << "Masukkan NIM: ";
-    cin >> nim;
+    cout << "Masukkan nama mahasiswa: ";
+    getline(cin, mhs.nama);
+    
+    cout << "Masukkan NIM mahasiswa: ";
+    getline(cin, mhs.nim);
 
-    cout << "Masukkan kom: ";
-    cin >> kom; 
+    cout << "Masukkan jurusan mahasiswa: ";
+    getline(cin, mhs.jurusan);
 
-    cout << "Masukkan IPK: ";
-    cin >> ipk;
-    cout << fixed << setprecision(2);
+    cout << "Masukkan IPK mahasiswa: ";
+    cin >> mhs.ipk;
 
-    cout << "\nBerikut Adalah Data Anda:\n";
-    cout << "Nama : " << nama << endl;
-    cout << "NIM  : " << nim << endl;
-    cout << "Kom  : " << kom << endl;
-    cout << "IPK  : " << ipk << endl;
+    cout << "\nData Mahasiswa:" << endl;
+    cout << "Nama: " << mhs.nama << endl;
+    cout << "NIM: " << mhs.nim << endl;
+    cout << "Jurusan: " << mhs.jurusan << endl;
+    cout << "IPK: " << mhs.ipk << endl;
 
+    return 0;
 }
