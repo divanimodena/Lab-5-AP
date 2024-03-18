@@ -4,15 +4,20 @@
 using namespace std;
 
 int main() {
-    string nama1, nama2;
+    string nama;
 
-    system("cls");
-    cout << "Masukkan Nama Mahasiswa (menggunakan getline): ";
-    getline(cin, nama1); 
-    cout << "Masukkan Nama Mahasiswa (menggunakan cin): ";
-    cin >> nama2; 
+    // Menggunakan cin
+    cout << "Masukkan nama (menggunakan cin): ";
+    cin >> nama;
+    cout << "Nama (menggunakan cin): " << nama << endl;
 
-    cout << "Nama Mahasiswa (menggunakan getline): " << nama1 << endl; 
-    cout << "Nama Mahasiswa (menggunakan cin): " << nama2 << endl; 
+    // Membersihkan buffer
+    cin.ignore();
 
+    // Menggunakan getline
+    cout << "Masukkan nama (menggunakan getline): ";
+    getline(cin, nama);
+    cout << "Nama (menggunakan getline): " << nama << endl;
+
+    return 0;
 }
